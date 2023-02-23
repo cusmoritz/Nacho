@@ -24,10 +24,30 @@ const createTables = async() => {
         CREATE TABLE users (
             id SERIAL PRIMARY KEY,
             name VARCHAR(100) NOT NULL,
-        )
+        );
         `
         );
+        console.log('done creating tables')
     } catch (error) {
         throw error;
     }
+};
+
+const dropTables = async() => {
+    try {
+        console.log('dropping tables...');
+        await client.query(`
+        DROP TABLE IF EXISTS posts;
+        DROP TABLE IF EXISTS users;
+        `);
+        console.log('done dropping tables')
+    } catch (error) {
+        throw error;
+    }
+};
+
+module.exports = {
+    createTables,
+    dropTables,
+    
 }
