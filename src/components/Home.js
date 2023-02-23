@@ -1,13 +1,15 @@
 import React from "react";
 import InputForm from "./InputForm";
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 const Home = () => {
     return (
         <div>
-            <p>Home world.</p>
+            <h1>Nacho Pro</h1>
             <NavBar />
             <InputForm />
+            <Footer />
         </div>
     )
 }
