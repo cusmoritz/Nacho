@@ -28,8 +28,22 @@ const fetchAllPosts = async () => {
     }
 }
 
+const fetchOnePost = async(postId) => {
+    try {
+        const {rows: [onePost]} = await client.query(`
+        SELECT * FROM posts
+        WHERE id = $1
+        ;
+        `, [postId]);
+        return onePost;
+    } catch (error) {
+        throw error;
+    }
+}
+
 module.exports = {
     newPost,
     fetchAllPosts,
+    fetchOnePost,
 
 }

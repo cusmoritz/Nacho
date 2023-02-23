@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-const InputForm = () => {
-
+const CreatePost = () => {
     const [business, setBusiness] = useState("");
     const [chips, setChips] = useState("");
     const [cheese, setCheese] = useState("");
@@ -66,4 +65,4 @@ const InputForm = () => {
     )
 };
 
-export default InputForm;
+export default CreatePost;
