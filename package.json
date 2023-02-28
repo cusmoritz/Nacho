@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "react-scripts start",
-    "db:build": "node db/seed.js"
+    "db:build": "node db/seed.js",
+    "api": "nodemon api/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   },
   "dependencies": {
     "express": "^4.18.2",
+    "nodemon": "^2.0.20",
     "pg": "^8.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

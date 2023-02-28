@@ -1,7 +1,7 @@
 const client = require('./index');
 
 const newPost = async (postInfo) => {
-    const {business, location, chip_val, chip_notes, cheese_val, cheese_notes, meat_val, meat_notes, guac_val, guac_notes, salsa_val, salsa_notes, other_notes, cost } = postInfo;
+    const { business, location, chip_val, chip_notes, cheese_val, cheese_notes, meat_val, meat_notes, guac_val, guac_notes, salsa_val, salsa_notes, other_notes, cost } = postInfo;
     try {
         const {rows: [newPost]} = await client.query(`
         INSERT INTO posts (business, location, chip_val, chip_notes, cheese_val, cheese_notes, meat_val, meat_notes, guac_val, guac_notes, salsa_val, salsa_notes, other_notes, cost)
